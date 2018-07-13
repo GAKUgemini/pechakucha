@@ -1,0 +1,151 @@
+/*sign inページのscss*/
+.register-photo {
+  background:#f1f7fc;
+  padding:80px 0;
+  .form-container {
+    display:table;
+    max-width:900px;
+    width:90%;
+    margin:0 auto;
+    box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+    .projectname{
+      font-family: 'Wendy One', sans-serif;
+    }
+    .form1 {
+      padding:40px;
+      display:table-cell;
+      width:400px;
+      background-color:#ffffff;
+      padding:40px 60px;
+      color:#505e6c;
+      h2{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .btn-block{
+        border-radius:25px;
+        background: #ff8181;
+}
+}
+}
+}
+/*help pageのscss*/
+.features-boxed {
+  color:#313437;
+  background-color:#eef4f7;
+    .container {
+      max-width: 1140px;
+      padding-right:15px;
+      padding-left:15px;
+      margin-right:auto;
+      margin-left:auto;
+    .features{
+      padding: 50px 0;
+}
+    .justify-content-center {
+      -ms-flex-pack:center!important;
+      justify-content:center!important;
+}
+    .row {
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+      margin-right:-15px;
+      margin-left:-15px;
+}
+    .item {
+      text-align:center;
+      position: relative;
+      .box {
+        .name {
+          font-family: 'Wendy One', sans-serif;
+        }
+        .learn-more{
+          font-family: 'Wendy One', sans-serif;
+        }
+      }
+}
+
+
+      .intro {
+        h2 {
+          font-family: 'Wendy One', sans-serif;
+          margin-bottom:25px;
+          padding-top:25px;
+          font-size:24px;
+          font-weight:bold;
+          margin-bottom:40px;
+          padding-top:40px;
+          color:inherit;
+          h4 {
+            color: #7d8285;
+            margin-top: 0;
+            margin-bottom: 1rem;
+}
+}
+}
+}
+}
+
+/*selects画面のscss*/
+.container{
+  .row{
+    .selects-col{
+      .Tweet{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .btn-circle1.btn-xl{
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 35px;
+      }
+      .subtitle{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .Note{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .btn-circle2.btn-xl{
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 35px;
+
+      }
+      .learn-more{
+        text-align:center;
+      }
+    }
+  }
+}
+
+/*tweetページのscss*/
+.highlight-blue {
+  color:#fff;
+  background-color:#1edd98;
+  padding:50px 0;
+  .container{
+    .intro{
+      .text-center{
+        text-align: center;
+        border-radius: 25px;
+      }
+      .tweetpage{
+        font-family: 'Wendy One', sans-serif;
+      }
+    }
+    .btn-circle1.btn-xl{
+      width: 70px;
+      height: 70px;
+      padding: 10px 16px;
+      font-size: 24px;
+      line-height: 1.33;
+      border-radius: 35px;
+    }
+  }
+  }
