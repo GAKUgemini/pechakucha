@@ -126,7 +126,7 @@
 
 /*tweetページのscss*/
 .highlight-blue {
-  color:#fff;
+  color:000;
   background-color:#1edd98;
   padding:50px 0;
   .container{
@@ -134,7 +134,6 @@
       .text-center{
         text-align: center;
         border-radius: 25px;
-        /*入力文字が白になる原因がわからない*/
       }
       .tweetpage{
         font-family: 'Wendy One', sans-serif;
