@@ -1,7 +1,7 @@
 <div class="highlight-blue">
     <div class="container">
+      <%= form_for @tweet,url: tweets_path do |f| %>
         <div class="intro">
-          <%= form_for @tweet,url: tweets_path do |f| %>
             <h1 class="text-center tweetpage">This is tweet page</h1>
             <h3 class="text-center tweetpage">Please enter the content you want to tweet in the bottom form.</h3>
 
@@ -12,7 +12,7 @@
 
 
         </div>
-        <div class="buttons"><a class="btn btn-primary btn-lg btn-circle1 btn-xl center-block" role="button" href="#"><i class="glyphicon glyphicon-send"></i></a></div>
-  <%end%>
+        <div class="buttons"><%= f.submit "tweet",class: 'btn btn-primary btn-lg btn-circle1 btn-xl center-block tweet-text'%></div>
+        <%end%>
     </div>
 </div>
