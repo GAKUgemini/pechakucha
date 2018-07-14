@@ -167,6 +167,15 @@
       .tweetpage{
         font-family: 'Wendy One', sans-serif;
       }
+      .row{
+        .display-box{
+          .text-center{
+            font-family: 'Wendy One', sans-serif;
+          }
+          border: solid 2px rgba(1,1,6,0.17);
+          border-radius: 10px;
+        }
+      }
     }
     .btn-circle1.btn-xl{
       width: 70px;
