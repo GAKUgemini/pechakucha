@@ -5,11 +5,13 @@
             <h3 class="text-center tweetpage">&#x1f447;All of your tweet content should be displayed below.&#x1f447;</h3>
       <% @tweet.each do |tweet| %>
         <div class="row">
-          <div class="col-md-4 col-md-offset-4 display-box">
+          <div class="col-md-6 col-md-offset-3 display-box">
             <h3 class="text-center">
 
               <tr>
                 <td><%= tweet.text %></td>
+                <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
+                <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
               </tr>
             </h3>
           </div>
