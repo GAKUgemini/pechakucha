@@ -12,6 +12,7 @@
                 <td><%= tweet.text %></td>
                 <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
                 <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
+                <td><%= link_to 'Comment', tweet_path(tweet),method: :get%></td>
               </tr>
             </h3>
           </div>
