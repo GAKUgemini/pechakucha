@@ -9,12 +9,12 @@ class NotesController < ApplicationController
     end
   end
   def show
-  
+    @note = Note.find(params[:id])
   end
   def index
-
+    @notes = Note.all
   end
   private def note_params
-    params.require(:note).permit(:type, :title, :contents)
+    params.require(:note).permit(:genre, :title, :contents)
   end
 end
