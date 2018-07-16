@@ -260,3 +260,46 @@ background:#eb3b60;
     }
   }
   }
+
+/*note作成ページのscss*/
+.container{
+  .box-all{
+    .row{
+      .col-group{
+        .acount{
+          font-family: 'Wendy One', sans-serif;
+        }
+      }
+    }
+    .box-all-1{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border: solid 0.5px #cfcef4;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);
+
+      .row{
+        .col-group{
+        .btn-circle.btn-xl{
+          width: 70px;
+          height: 70px;
+          padding: 10px 16px;
+          font-size: 24px;
+          line-height: 1.33;
+          border-radius: 35px;
+        }
+        .label{
+        font-family: 'Wendy One', sans-serif;
+        }
+        .acount{
+        font-family: 'Wendy One', sans-serif;
+        }
+        .field{
+        border-radius: 20px;
+        }
+      }
+    }
+    }
+  }
+}
