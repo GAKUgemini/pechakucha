@@ -1,7 +1,7 @@
 <div class="features-boxed">
     <div class="container">
         <div class="intro">
-            <h1 class="text-center">・Notebook・</h1>
+            <h1 class="text-center title">・Notebook・</h1>
             <h2 class="text-center">Here is a page that allows you to view notes written by everyone.</h2>
         </div>
         <div class="row justify-content-center features">
@@ -9,9 +9,12 @@
             <div class="col-md-4 item">
                 <div class="box">
                     <h3 class="name"><%=note.title%></h3>
-                    <h3 class="description"><%=note.genre%></h3>
-                    <h4 class="description"><%=note.contents%></h4>
+                    <h3 class="description1"><%=note.genre%></h3>
+                    <h4 class="description2"><%=note.contents%></h4>
                     <a href="#" class="learn-more">Learn more »</a>
+                    <%= link_to 'Show', note_path(note) %>
+                    <%= link_to 'Edit', edit_note_path(note) %>
+                    <%= link_to 'Destroy', note_path(note),method: :delete, data: { confirm: 'Are you sure?' } %>
                 </div>
             </div>
         <%end%>

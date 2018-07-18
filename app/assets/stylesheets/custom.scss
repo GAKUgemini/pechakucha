@@ -305,3 +305,61 @@ background:#eb3b60;
 }
 
 /*note一覧画面のscss*/
+.features-boxed{
+  .container{
+    .intro{
+      .title{
+        font-family: 'Wendy One', sans-serif;
+      }
+    }
+  .features{
+    .item{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #5d627b;
+      background: white;
+      border: solid 0.5px #cfcef4;
+      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);}
+
+      .box{
+        .description1{
+        font-family: 'Wendy One', sans-serif;
+        }
+        .description2{
+        font-family: 'Wendy One', sans-serif;
+        font-family: 'Noto Serif', serif;
+        overflow: hidden;
+        }
+      }
+    }
+  }
+  }
+
+/*note投稿確認画面*/
+.container{
+  .intro{
+    .title{
+      font-family: 'Wendy One', sans-serif;
+    }
+    .subtitle{
+      font-family: 'Wendy One', sans-serif;
+    }
+  }
+  .row-show{
+    .text-center{
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #5d627b;
+      background: white;
+      border: solid 0.5px #cfcef4;
+      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);
+      .strong{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .instance{
+        font-family: 'Noto Serif', serif;
+      }
+    }
+
+  }
+}
