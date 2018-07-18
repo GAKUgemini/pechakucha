@@ -40,7 +40,7 @@ class TweetsController < ApplicationController
 
   redirect_to tweet_path
   end
-  
+
   private def tweet_params
     params.require(:tweet).permit(:text)
   end
