@@ -23,7 +23,22 @@
     <div class="col-md-1 text-space">
     </div>
     <div class="col-md-6 text-center">
-      
+      <h2 class="strong">Comments</h2>
+      <% @note.notecomments.each do |notebook| %>
+        <p>
+          <div class="strong">Comment area:</div>
+          <div class="instance"><%= notebook.body %></div>
+        </p>
+      <% end %>
+      <h2 class="strong">Create comment:</h2>
+        <%= form_for([@note, @note.notecomments.build]) do |f| %>
+          <p>
+            <%= f.text_area :body %>
+          </p>
+          <p>
+            <%= f.submit "create",class: 'btn btn-primary btn-lg btn-circle1 btn-xl center-block tweet-text' %>
+          </p>
+        <% end %>
     </div>
   </div>
 </div>

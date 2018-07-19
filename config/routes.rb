@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'selects/index'
   root 'pages#help'
-  resources :notes
+  resources :notes do
+    resources :notecomments
+  end
   resources :pages do
     resources :tweets
   end
