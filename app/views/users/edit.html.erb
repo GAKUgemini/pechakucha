@@ -1,0 +1,16 @@
+<div class="register-photo">
+    <div class="form-container">
+      <h1 class="text-center projectname">Welcome to pechakucha</h1>
+      <a href="/" class="btn btn-sm center-block"><p class="text-center">What's pechakucha?</p><i class="glyphicon glyphicon-plus"></i></a>
+        <form class="form1">
+            <h2 class="text-center"><strong>Edit</strong> <%=current_user.username%>'s account infomation.</h2>
+            <%= form_for @user,url: user_path(current_user), method: :patch, :html => {:class => "form-group"} do |f| %>
+            <div class="form-group"><%= f.label :email, class: 'text-white' %><%= f.text_field :email, class: 'form-control' %></div>
+            <div class="form-group"><%= f.label :username, class: 'text-white' %><%= f.text_field :username, class: 'form-control' %></div>
+            <div class="form-group"><%= f.label :sex, class: 'text-white' %><%= f.text_field :sex, class: 'form-control' %></div>
+            <div class="form-group"><%= f.label :image, class: 'text-white' %><%= f.text_field :image, class: 'form-control' %></div>
+            <div class="form-group"><%= f.submit "update", class: 'btn-block btn-white' %></div>
+            <% end %>
+        </form>
+    </div>
+</div>

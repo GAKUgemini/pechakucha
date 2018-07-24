@@ -1,18 +1,20 @@
-<div class="topic-index-wrapper">
-  <div class="container">
-    <% @good_tweets.each do |tweet| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="intro">
+        <h1 class="text-center title">・A good list・</h1>
+        <h2 class="text-center subtitle">Here you will see a list of tweets you've liked</h2>
+  </div>
+  <div class="row justify-content-center features">
+        <% @good_tweets.each do |tweet| %>
+        <div class="col-md-4 item">
           <div class="topic-index-single">
-            <h2 class="topic-author">
+            <h2 class="topic-author text-center">
               <%= tweet.user.username %>
             </h2>
-            <p class="topic-text">
+            <p class="topic-text text-center">
               <%= tweet.text %>
             </p>
           </div>
         </div>
-      </div>
-    <% end %>
+        <% end %>
   </div>
 </div>

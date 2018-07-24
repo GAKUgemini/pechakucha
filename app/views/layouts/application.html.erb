@@ -20,7 +20,12 @@
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
         <li>
-          <%= link_to "#" do %>
+          <%= link_to user_path(@current_user) do %>
+            <%= image_tag "icons/profile.png" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to goods_index_path do %>
             <%= image_tag "icons/good.png" %>
           <% end %>
         </li>

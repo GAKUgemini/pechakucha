@@ -14,7 +14,11 @@
                 <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
                 <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
                 <td><%= link_to 'Comment', tweet_path(tweet),method: :get%></td>
-                <td><% if !tweet.good_ids.include?(current_user) %><%= link_to goods_path(tweet_id: tweet.id), method: :post do %><%= image_tag 'icons/good_face.png', class: 'topic-index-icon' %><% end %><% end %></td>
+                <td><% if !tweet.good_users.include?(current_user) %>
+                      <%= link_to goods_path(tweet_id: tweet.id), method: :post do %>
+                      <%= image_tag 'icons/good_face.png', class: 'topic-index-icon' %>
+                      <% end %>
+                    <% end %></td>
               </tr>
             </h3>
           </div>

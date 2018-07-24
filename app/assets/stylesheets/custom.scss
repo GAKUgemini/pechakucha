@@ -380,3 +380,37 @@ background:#eb3b60;
     }
   }
 }
+
+/*ユーザーの自己紹介ページのcss*/
+.container{
+  .row{
+    .title{
+      .hello{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .sub-text{
+        font-family: 'Wendy One', sans-serif;
+      }
+    }
+      .item{
+        padding: 0.5em 1em;
+        margin: 2em 0;
+        color: #5d627b;
+        background: white;
+        border: solid 0.5px #cfcef4;
+        box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);
+    }
+  }
+}
+
+/*いいね一覧のscss*/
+.container{
+  .intro{
+    .title{
+      font-family: 'Wendy One', sans-serif;
+    }
+    .subtitle{
+      font-family: 'Wendy One', sans-serif;
+    }
+  }
+}

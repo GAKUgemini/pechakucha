@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center title">
+      <h1 class="hello">hello <%=current_user.username%> !</h1>
+      <h2 class="sub-text">this is your profile page</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center item">
+      <%= image_tag 'profile.jpg', class: 'rounded-circle', :size =>'180x180' %>
+
+      <tr>
+        <td><p>self introduction</p></td>
+        <td><%=link_to 'edit', edit_user_path(current_user) %></td>
+      </tr>
+
+
+
+
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users, only: [:index, :show, :edit, :update]
+  get 'serch/index'
   get 'selects/index'
   root 'pages#help'
   resources :notes do
