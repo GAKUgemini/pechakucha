@@ -414,3 +414,26 @@ background:#eb3b60;
     }
   }
 }
+
+/*登録済みユーザー一覧画面のscss*/
+.team-boxed{
+  .container{
+    .intro{
+      .title{
+        font-family: 'Wendy One', sans-serif;
+      }
+      .subtitle{
+        font-family: 'Wendy One', sans-serif;
+      }
+    }
+    .people{
+      .item{
+        .box{
+          .username{
+            font-family: 'Wendy One', sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
