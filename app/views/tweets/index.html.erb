@@ -1,29 +1,33 @@
-<div class="highlight-blue">
+<div class="testimonials-clean">
     <div class="container">
         <div class="intro">
-            <h1 class="text-center tweetpage">This is the page where you can see the contents of all tweets</h1>
-            <h3 class="text-center tweetpage">&#x1f447;All of your tweet content should be displayed below.&#x1f447;</h3>
-      <% @tweet.each do |tweet| %>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 display-box">
-            <h3 class="text-center">
-
-              <tr>
-                <td><%= tweet.user.username%></td>
-                <td><%= tweet.text %></td>
-                <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
-                <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
-                <td><%= link_to 'Comment', tweet_path(tweet),method: :get%></td>
-                <td><% if !tweet.good_users.include?(current_user) %>
-                      <%= link_to goods_path(tweet_id: tweet.id), method: :post do %>
-                      <%= image_tag 'icons/good_face.png', class: 'topic-index-icon' %>
-                      <% end %>
-                    <% end %></td>
-              </tr>
-            </h3>
-          </div>
+            <h1 class="text-center title">All of tweets</h1>
+            <h2 class="text-center subtitle">This is the page where you can see the contents of all tweets.</h2>
         </div>
-      <% end %>
+        <div class="row people">
+          <% @tweet.each do |tweet| %>
+            <div class="col-md-6 col-lg-4 item">
+                <tr>
+                  <td><div class="author text-center"><img class="rounded-circle" src="1.jpg" /></div></td>
+                  <td><h3 class="name text-center"><%= tweet.user.username%></h3></td>
+                </tr>
+                <div class="box">
+                    <p class="description text-center"><%= tweet.text %></p>
+                </div>
+                <div class="text-center">
+                <tr>
+                  <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
+                  <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
+                  <td><%= link_to 'Comment', tweet_path(tweet),method: :get%></td>
+                  <td><% if !tweet.good_users.include?(current_user) %>
+                        <%= link_to goods_path(tweet_id: tweet.id), method: :post do %>
+                        <%= image_tag 'icons/good_face.png', class: 'topic-index-icon' %>
+                        <% end %>
+                      <% end %></td>
+                </tr>
+              </div>
+            </div>
+          <% end %>
         </div>
     </div>
 </div>

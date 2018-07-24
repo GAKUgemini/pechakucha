@@ -213,33 +213,27 @@ background:#eb3b60;
 }
 
 /*tweetページのscss*/
-.highlight-blue {
-  color:222222;
-  background-color:#1edd98;
-  padding:50px 0;
+.testimonials-clean{
+  color:#5f656a;
+  background-color:#a7d7ef;
   .container{
     .intro{
-      .text-center{
-        text-align: center;
-        border-radius: 25px;
+      .title{
+        font-family: 'Wendy One', sans-serif;
       }
-      .tweetpage{
+      .subtitle{
         font-family: 'Wendy One', sans-serif;
       }
     }
-    .btn-circle1.btn-xl{
-      width: 70px;
-      height: 70px;
-      padding: 10px 16px;
-      font-size: 24px;
-      line-height: 1.33;
-      border-radius: 35px;
-    }
-    .tweet-text{
-      text-align: center;
+    .people{
+      .item{
+      .box{
+        padding: 35px
+      }
+      }
     }
   }
-  }
+}
 
 /*tweet確認ページも生成*/
 .highlight-blue {
