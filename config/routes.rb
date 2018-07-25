@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   delete 'logout', to:'sessions#destroy'
   get 'goods/index'
   post '/goods', to: 'goods#create'
+  get 'mores/index'
+  post '/mores', to: 'mores#create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
