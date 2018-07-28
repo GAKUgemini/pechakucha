@@ -6,19 +6,34 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8 text-center item">
-      <%= image_tag 'profile.jpg', class: 'rounded-circle', :size =>'180x180' %>
+    <% if current_user.image.url == nil%>
+      <div class="col-md-2"></div>
+      <div class="col-md-8 text-center item">
+      
 
-      <tr>
-        <td><p>self introduction</p></td>
-        <td><%=link_to 'edit', edit_user_path(current_user) %></td>
-      </tr>
+          <tr>
+            <td><p>self introduction</p></td>
+            <td><section class="stats">
+            <%= render 'stats' %>
+            </td>
+            <td><%=link_to 'edit', edit_user_path(current_user) %></td>
+          </tr>
+      </div>
+      <div class="col-md-2"></div>
+    <% else %>
+      <div class="col-md-2"></div>
+      <div class="col-md-8 text-center item">
+        <%= image_tag current_user.image.url, class: 'rounded-circle', :size =>'180x180' %>
 
-
-
-
-    </div>
-    <div class="col-md-2"></div>
+          <tr>
+            <td><p>self introduction</p></td>
+            <td><section class="stats">
+            <%= render 'stats' %>
+            </td>
+            <td><%=link_to 'edit', edit_user_path(current_user) %></td>
+          </tr>
+      </div>
+      <div class="col-md-2"></div>
+    <% end %>
   </div>
 </div>
