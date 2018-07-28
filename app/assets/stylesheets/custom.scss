@@ -227,6 +227,11 @@ background:#eb3b60;
     }
     .people{
       .item{
+        .rounded-circle{
+          border-radius: 40px;
+          width: 80px;
+          height: 80px;
+        }
       .box{
         padding: 35px
       }
@@ -387,6 +392,11 @@ background:#eb3b60;
       }
     }
       .item{
+        .rounded-circle{
+          border-radius: 70px;
+          height: 140px;
+          width: 140px;
+        }
         padding: 0.5em 1em;
         margin: 2em 0;
         color: #5d627b;

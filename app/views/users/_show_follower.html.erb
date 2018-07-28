@@ -1,0 +1,14 @@
+<div class="container">
+  <div class"row">
+    <div class"col-md-6 col-md-offset-3">
+      <% @user.followers.each do |user| %>
+        <table>
+          <tr>
+            <td>  <%= user.username %> </td>
+            <td>  <%= link_to '詳細', user_path(user) %></td>
+          </tr>
+    </div>
+        </table>
+      <% end %>
+  </div>
+</div>

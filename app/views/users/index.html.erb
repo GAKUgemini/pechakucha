@@ -7,10 +7,10 @@
         <div class="row people">
           <%@user.each do |user|%>
             <div class="col-md-6 col-lg-4 item">
-                <div class="box"><img class="rounded-circle" src="1.jpg" />
+                <div class="box">
                     <h3 class="name text-center username"><%=user.username%></h3>
-                    <p class="title"><%=user.sex%></p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa.</p>
+                    <p class="title text-center"><%=user.sex%></p>
+                    <p class="description text-center"><%=user.description%></p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                 </div>
             </div>

@@ -6,4 +6,8 @@ module ApplicationHelper
   def logged_in?
     !current_user.nil?
   end
+
+  def current_user?(tweet)
+    tweet.user_id == current_user.id
+ end
 end

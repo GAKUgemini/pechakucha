@@ -1,6 +1,5 @@
 <div class="login-clean">
   <%= form_for :session, url: login_path do |f| %>
-    <form method="post">
         <h2 class="sr-only">Login Form</h2>
         <div class="illustration"><i class="icon ion-ios-navigate"></i></div>
         <div class="form-group"><%= f.label :email, class: "text-white" %>
@@ -8,6 +7,5 @@
         <div class="form-group"><%= f.label :password, class: "text-white" %>
             <%= f.password_field :password, class: "form-control" %></div>
         <div class="form-group"><%= f.submit "log in", class: "btn-block btn-white" %></div>
-    </form>
   <% end %>
 </div>
