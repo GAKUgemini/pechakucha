@@ -1,17 +1,23 @@
 <div class="topic-index-wrapper">
   <div class="container">
-    <% @more_notes.each do |note| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-            <h2 class="topic-author">
-              <%= current_user.username %>
-            </h2>
-              <%= note.contents %>
-            </p>
+    <div class="row">
+      <div class="col-md-2"></div><!--profile information -->
+      <div class="col-md-1"></div><!--blank space -->
+      <div class="col-md-9"><!--all contents-->
+        <% @more_notes.each do |note| %>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="topic-index-single">
+                <h2 class="topic-author">
+                  <%= current_user.username %>
+                    </h2>
+                  <%= note.contents %>
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>

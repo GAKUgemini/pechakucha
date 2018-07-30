@@ -3,19 +3,28 @@
         <div class="intro">
             <h1 class="text-center title">・Notebook・</h1>
             <h2 class="text-center">Here is a page that allows you to view notes written by everyone.</h2>
-
+            <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            <a href="/notes/new">
+            <button type="button" class="btn btn-info btn-lg center-block">make note </button>
+            </a>
+            </div>
+            </div>
         </div>
         <div class="row justify-content-center features">
         <%@notes.each do |note|%>
             <div class="col-md-4 item">
                 <div class="box">
+                    <div class="user-information"><%= image_tag note.user.image.url, class: 'rounded-circle'%>　<%= note.user.username %></div>
                     <h3 class="name"><%=note.title%></h3>
                     <h3 class="description1"><%=note.genre%></h3>
                     <h4 class="description2"><%=note.contents%></h4>
                     <a href="#" class="learn-more">Learn more »</a>
-                    <%= link_to 'Show', note_path(note) %>
+                    <%= link_to 'Comment', note_path(note) %>
+                    <%if (user_confirmation(note)) %>
                     <%= link_to 'Edit', edit_note_path(note) %>
                     <%= link_to 'Destroy', note_path(note),method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <%end%>
                     <% if !note.more_users.include?(current_user) %>
                     <%= link_to mores_path(note_id: note.id), method: :post do %>
                     <%= image_tag 'icons/more.png', class: 'topic-index-icon' %>

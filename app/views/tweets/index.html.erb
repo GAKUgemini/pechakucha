@@ -3,6 +3,9 @@
         <div class="intro">
             <h1 class="text-center title">All of tweets</h1>
             <h2 class="text-center subtitle">This is the page where you can see the contents of all tweets.</h2>
+            <a href="/tweets/new">
+            <button type="button" class="btn btn-info btn-lg center-block"> Let's tweet  </button>
+            </a>
         </div>
         <div class="row people">
           <% @tweet.each do |tweet| %>
@@ -19,8 +22,10 @@
                 </div>
                 <div class="text-center">
                 <tr>
+                  <%if(user_confirmation(tweet))%>
                   <td><%= link_to 'Edit', edit_tweet_path(tweet)%></td>
                   <td><%= link_to 'Destroy', tweet_path(tweet),method: :delete, data: { confirm: 'Are you sure?' }%></td>
+                  <%end%>
                   <td><%= link_to 'Comment', tweet_path(tweet),method: :get%></td>
                   <td><% if !tweet.good_users.include?(current_user) %>
                         <%= link_to goods_path(tweet_id: tweet.id), method: :post do %>

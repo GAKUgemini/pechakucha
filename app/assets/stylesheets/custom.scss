@@ -18,7 +18,7 @@
 
 /*sign inページのscss*/
 .register-photo {
-  background:#f1f7fc;
+  background:#49d6ff;
   padding:80px 0;
   .form-container {
     display:table;
@@ -113,7 +113,7 @@ background:#eb3b60;
 /*help pageのscss*/
 .features-boxed {
   color:#313437;
-  background-color:#eef4f7;
+  background-color:#49d6ff;
     .container {
       max-width: 1140px;
       padding-right:15px;
@@ -214,10 +214,13 @@ background:#eb3b60;
 
 /*tweetページのscss*/
 .testimonials-clean{
-  color:#5f656a;
-  background-color:#a7d7ef;
+  color:#000000;
+  background-color:#49d6ff;
   .container{
     .intro{
+      .btn{
+        background-color: #ff57b9;
+      }
       .title{
         font-family: 'Wendy One', sans-serif;
       }
@@ -243,7 +246,7 @@ background:#eb3b60;
 /*tweet確認ページも生成*/
 .highlight-blue {
   color:222222;
-  background-color:#1edd98;
+  background-color:#49d6ff;
   padding:50px 0;
   .container{
     .intro{
@@ -325,6 +328,9 @@ background:#eb3b60;
 .features-boxed{
   .container{
     .intro{
+      .btn{
+        background-color: #ff57b9;
+      }
       .title{
         font-family: 'Wendy One', sans-serif;
       }
@@ -339,6 +345,13 @@ background:#eb3b60;
       box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);}
 
       .box{
+        .user-information{
+        .rounded-circle{
+          border-radius: 20px;
+          width: 40px;
+          height: 40px;
+        }
+        }
         .description1{
         font-family: 'Wendy One', sans-serif;
         }
@@ -440,4 +453,8 @@ background:#eb3b60;
       }
     }
   }
+}
+/*unffolwボタンの色*/
+.unfollow-button{
+  background-color: #ff5c43;
 }

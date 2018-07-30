@@ -41,4 +41,5 @@ class User < ApplicationRecord
     end
       return false
   end
+
 end
