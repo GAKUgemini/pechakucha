@@ -27,7 +27,7 @@
       <% @note.notecomments.each do |notebook| %>
         <p>
           <div class="strong">Comment area:</div>
-          <div class="instance"><%= notebook.body %></div>
+          <div class="instance"><%=notebook.user.username %>　<%= notebook.body %></div>
         </p>
       <% end %>
       <h2 class="strong">Create comment:</h2>

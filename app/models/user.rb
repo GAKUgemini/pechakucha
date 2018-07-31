@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_many :notecomments
+
   has_many :mores
   has_many :more_notes, through: :mores, source: 'note'
   has_many :goods

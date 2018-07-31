@@ -115,6 +115,28 @@ background:#eb3b60;
   color:#313437;
   background-color:#49d6ff;
     .container {
+      .row4{
+        .self-introduction-box{
+          .box{
+            .my-information{
+              font-family: 'Noto Serif', serif;
+            }
+            .font{
+              font-family: 'Wendy One', sans-serif;
+            }
+            background-color: #fff;
+            padding:30px;
+            margin-bottom:30px; 
+          }
+        }
+      }
+      .self-produce{
+        .self-produce{
+         .self-introduction{
+          font-family: 'Wendy One', sans-serif;
+         }
+        }
+      }
       max-width: 1140px;
       padding-right:15px;
       padding-left:15px;
