@@ -6,9 +6,9 @@
         </div>
         <div class="row people">
           <%@user.each do |user|%>
-            <div class="col-md-6 col-lg-4 item">
+            <div class="col-md-4 item">
                 <div class="box">
-                    <h3 class="name text-center username"><%=user.username%></h3>
+                    <h3 class="name text-center username"><%=image_tag user.image.url, class: 'rounded-circle'%>　<%=user.username%></h3>
                     <p class="title text-center"><%=user.sex%></p>
                     <p class="description text-center"><%=user.description%></p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>

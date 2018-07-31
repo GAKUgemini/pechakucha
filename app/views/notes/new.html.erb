@@ -1,32 +1,33 @@
-<div class="container">
-<div class="box-all">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 col-group">
-      <h1 class="text-center acount">This is the page for making notes</h1>
+<div class="notes-new-page">
+  <div class="container">
+    <div class="box-all"> 
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-group">
+          <h1 class="text-center acount">This is the page for making notes</h1>
+        </div>
+      </div>
+    <div class="box-all-1">
+      <%= form_for @note, url:notes_path, :html => {:class => "form-group"} do |f| %>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 col-group">
+            <h4 class="text-center"><%= f.label :genre%></h4>
+            <h4 class="text-center"><%= f.text_field :genre, class:"field" %></h4>
+            <h4 class="text-center"><%= f.label :title %></h4>
+            <h4 class="text-center"><%= f.text_field :title, class:"field" %></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 col-group">
+            <h4 class="text-center"><%= f.label :contents %></h4>
+            <h4 class="text-center"><%= f.text_area :contents, class:"field"%></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 col-group">
+          <div class="submit-btn"><%= f.submit "make",class:'btn btn-primary btn-lg center-block btn-circl btn-xl' %></div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-  <div class="box-all-1">
-  <%= form_for :note, url: notes_path, :html => {:class => "form-group"} do |f| %>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-group">
-        <h4 class="text-center"><%= f.label :genre%></h4>
-        <h4 class="text-center"><%= f.text_field :genre, class:"field" %></h4>
-        <h4 class="text-center"><%= f.label :title %></h4>
-        <h4 class="text-center"><%= f.text_field :title, class:"field" %></h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-group">
-      <h4 class="text-center"><%= f.label :contents %></h4>
-      <h4 class="text-center"><%= f.text_area :contents, class:"field"%></h4>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-group">
-      <div class="submit-btn"><%= f.submit "make",class:'btn btn-primary btn-lg center-block btn-circl btn-xl' %></div>
-    </div>
-  </div>
-  <% end %>
-</div>
-</div>
 </div>

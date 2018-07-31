@@ -252,6 +252,12 @@ background:#eb3b60;
     }
     .people{
       .item{
+        padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #5d627b;
+      background: white;
+      border: solid 0.5px #cfcef4;
+      box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.22);}
         .rounded-circle{
           border-radius: 40px;
           width: 80px;
@@ -263,7 +269,7 @@ background:#eb3b60;
       }
     }
   }
-}
+
 
 /*tweet確認ページも生成*/
 .highlight-blue {
@@ -304,6 +310,8 @@ background:#eb3b60;
   }
 
 /*note作成ページのscss*/
+.notes-new-page{
+  background-color: #49d6ff;
 .container{
   .box-all{
     .row{
@@ -345,7 +353,7 @@ background:#eb3b60;
     }
   }
 }
-
+}
 /*note一覧画面のscss*/
 .features-boxed{
   .container{
@@ -416,6 +424,8 @@ background:#eb3b60;
 }
 
 /*ユーザーの自己紹介ページのcss*/
+.user-show{
+  background-color: #49d6ff;
 .container{
   .row{
     .title{
@@ -441,7 +451,7 @@ background:#eb3b60;
     }
   }
 }
-
+}
 /*いいね一覧のscss*/
 .container{
   .intro{
@@ -456,6 +466,7 @@ background:#eb3b60;
 
 /*登録済みユーザー一覧画面のscss*/
 .team-boxed{
+  background-color: #49d6ff;
   .container{
     .intro{
       .title{
@@ -468,6 +479,12 @@ background:#eb3b60;
     .people{
       .item{
         .box{
+          background-color: #fff;
+          .rounded-circle{
+            border-radius: 40px;
+          height: 80px;
+          width: 80px;
+          }
           .username{
             font-family: 'Wendy One', sans-serif;
           }

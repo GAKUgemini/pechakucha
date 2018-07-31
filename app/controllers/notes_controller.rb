@@ -4,8 +4,9 @@ class NotesController < ApplicationController
   end
   def create
     @note = Note.new(note_params)
+    @note.user = current_user
     if @note.save
-      redirect_to @note
+      redirect_to :action => "index"
     end
   end
   def show
@@ -37,6 +38,6 @@ class NotesController < ApplicationController
   end
 
   private def note_params
-    params.require(:note).permit(:genre, :title, :contents)
+    params.require(:note).permit(:genre,:title,:contents)
   end
 end

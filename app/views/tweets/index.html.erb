@@ -10,13 +10,10 @@
         <div class="row people">
           <% @tweet.each do |tweet| %>
             <div class="col-md-6 col-lg-4 item">
-                <tr>
-                  <td><div class="author text-center"><%= image_tag tweet.user.image.url, class: 'rounded-circle', :size =>'180x180' %></div></td>
-                  <td><h3 class="name text-center"><%= tweet.user.username%></h3></td>
+                  <div class="author text-center"><%= image_tag tweet.user.image.url, class: 'rounded-circle', :size =>'180x180' %><h3 class="name text-center"><%= tweet.user.username%></h3></div>
                   <% unless current_user?(tweet) %>
-                  <td><%= render 'follow_form', locals: {user: @user} if logged_in? %></td>
+                  <%= render 'follow_form', locals: {user: @user} if logged_in? %>
                   <% end %>
-                </tr>
                 <div class="box">
                     <p class="description text-center"><%= tweet.text %></p>
                 </div>

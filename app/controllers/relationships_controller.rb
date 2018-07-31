@@ -4,4 +4,9 @@ class RelationshipsController < ApplicationController
         current_user.follow(user)
         redirect_to user
     end
+
+    def destroy
+        user = User.find(params[:follower_id])
+        user.destroy
+    end
 end
