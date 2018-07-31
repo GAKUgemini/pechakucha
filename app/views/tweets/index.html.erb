@@ -12,7 +12,20 @@
             <div class="col-md-6 col-lg-4 item">
                   <div class="author text-center"><%= image_tag tweet.user.image.url, class: 'rounded-circle', :size =>'180x180' %><h3 class="name text-center"><%= tweet.user.username%></h3></div>
                   <% unless current_user?(tweet) %>
-                  <%= render 'follow_form', locals: {user: @user} if logged_in? %>
+                    <% if logged_in? %>
+                      <div id="follow_form">
+                        <% if current_user.following?(tweet.user) %>
+                          <%= form_for(current_user.active_relationships.find_by(following_id: tweet.user.id),html: { method: :delete }) do |f| %>
+                            <%= f.submit "Unfollow", class: "btn btn-danger center-block unfollow-button" %>
+                          <% end %>
+                        <% else %>
+                          <%= form_for(current_user.active_relationships.build) do |f| %>
+                            <div><%= hidden_field_tag :following_id, @tweet.ids %></div>
+                            <%= f.submit "Follow", class: "btn btn-primary center-block" %>
+                          <% end %>
+                        <% end %>
+                      </div>
+                    <% end %>
                   <% end %>
                 <div class="box">
                     <p class="description text-center"><%= tweet.text %></p>

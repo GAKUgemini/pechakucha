@@ -35,13 +35,9 @@ class User < ApplicationRecord
 
   # 現在のユーザーがフォローしてたらtrueを返す
   def following?(other_user)
-    other_user_ids = other_user.ids
-    for other_user_id in other_user_ids do
-      if following.ids.include?(other_user_id)
-        return true
-      end
+    if following.ids.include?(other_user.id)
+      return true
     end
       return false
   end
-
 end

@@ -1,0 +1,20 @@
+<div class="all-box">
+<div class="container">
+<div class="row">
+    <h1 class="text-center">this is page that search all note</h1>
+</div>
+<div class="row">
+<div class="col-md-12 text-center">
+<%= search_form_for @q do |f| %>
+<%= f.label :genre_cont, "Genre" %>
+<%= f.search_field :genre_cont %><br />
+<%= f.label :title_cont, "Title" %>
+<%= f.search_field :title_cont %><br />
+<%= f.label :contens_cont, "Contents" %>
+<%= f.search_field :contents_cont %><br />
+<%= f.submit %>
+<% end %>
+</div>
+</div>
+</div>
+</div>
