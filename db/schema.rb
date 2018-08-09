@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_30_082210) do
+ActiveRecord::Schema.define(version: 2018_08_09_091713) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2018_07_30_082210) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
   create_table "likes", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "tweet_id", null: false
@@ -85,7 +84,6 @@ ActiveRecord::Schema.define(version: 2018_07_30_082210) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_confirmation"
     t.string "password_digest"
     t.string "sex"
     t.string "image"
